@@ -8,3 +8,9 @@ edition = "2018"
 
 [dependencies]
 rust-crypto = "0.2.36"
+
+[profile.release]
+lto = true
+opt-level = "s"
+codegen-units = 1
+panic = "abort"
